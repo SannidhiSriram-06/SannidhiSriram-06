@@ -14,48 +14,64 @@ Building cloud infrastructure with AWS, Azure, Terraform, Docker, and Kubernetes
 
 ---
 
-### Projects
+### 🏗️ Featured Infrastructure & SRE Projects
 
-**[observability-fargate](https://github.com/SannidhiSriram-06/observability-fargate)**
+**[aws-fargate-observability-stack](https://github.com/SannidhiSriram-06/aws-fargate-observability-stack)**
 Security observability pipeline on AWS ECS Fargate (zero EC2). Prometheus scrapes infrastructure metrics, Grafana visualizes across a 3-panel dashboard, alert rule fires on request-rate threshold breach. Full stack — VPC, subnets, IGW, security groups, ECR, least-privilege IAM roles, CloudWatch logging — provisioned via Terraform with zero manual console steps.
-`AWS · Terraform · Prometheus · Grafana · Docker`
+`AWS Fargate · Terraform · Prometheus · Grafana · Docker`
 
-**[ai-test-generator-gitops](https://github.com/SannidhiSriram-06/ai-test-generator-gitops)**
-FastAPI service generating pytest suites from Python code via Groq's LLaMA 3.1, rate-limited and input-validated. Jenkins pipeline enforces a 70% coverage gate (87% achieved), builds and tags Docker images by build number + commit SHA, pushes to AWS ECR, and updates a GitOps repo's Helm values — ArgoCD auto-syncs to Kubernetes with zero manual deployment steps.
-`FastAPI · Jenkins · Docker · Kubernetes · Helm · ArgoCD · AWS ECR`
+**[aws-self-healing-microservice](https://github.com/SannidhiSriram-06/aws-self-healing-microservice)**
+Four-layer self-healing system on AWS — application health checks, container-level restart, ASG instance replacement, and ALB traffic isolation. Multi-AZ VPC, Application Load Balancer, and Auto Scaling Group provisioned via Terraform. GitHub Actions CI integrates Snyk to block vulnerable images pre-push.
+`AWS EC2 & ALB · Terraform · Docker · GitHub Actions · Snyk`
 
-**[self-healing-microservice](https://github.com/SannidhiSriram-06/self-healing-microservice)**
-Four-layer self-healing system on AWS — application health checks, container-level restart, ASG instance replacement, and ALB traffic isolation — recovers from failures without manual intervention. Multi-AZ VPC, load balancer, and Auto Scaling Group (2–4 instances, CPU-based) provisioned via Terraform. GitHub Actions CI integrates Snyk to block vulnerable images pre-push.
-`AWS · Terraform · Docker · GitHub Actions · Snyk`
+**[aws-sre-incident-simulation](https://github.com/SannidhiSriram-06/aws-sre-incident-simulation)**
+Hands-on simulation of an AWS Cloud Support Engineering workflow. Provisioned flawed infrastructure via Terraform, executed remote fault diagnosis via SSM Session Manager and Client VPN, performed log analysis with CloudWatch Logs Insights, and conducted point-in-time recovery with AWS Backup.
+`AWS Backup · SSM · Client VPN · CloudWatch Logs Insights · IaC`
 
-**[cloud-support-ticket-simulation](https://github.com/SannidhiSriram-06/cloud-support-ticket-simulation)**
-Hands-on simulation of an AWS Cloud Support Engineering workflow — remote fault diagnosis via SSM Session Manager and Client VPN, log analysis with CloudWatch Logs Insights, point-in-time recovery with AWS Backup, and customer-facing incident documentation.
-`AWS Backup · SSM · Client VPN · CloudWatch Logs Insights · EC2`
+**[ai-pytest-generator-gitops](https://github.com/SannidhiSriram-06/ai-pytest-generator-gitops)**
+Automated CI/CD pipeline enforcing a 70% coverage gate via Jenkins. Builds and tags Docker images, pushes to AWS ECR, and auto-updates Helm values in a GitOps repository. ArgoCD syncs changes to the Kubernetes cluster automatically.
+`Jenkins · Docker · Kubernetes · Helm · ArgoCD · AWS ECR`
 
-**[Infosys_AI_KYC_Compliance](https://github.com/SannidhiSriram-06/Infosys_AI_KYC_Compliance)**
-Full-stack KYC document verification platform for BFSI — document classification, OCR extraction, GNN-based fraud detection. React frontend on S3, Node.js backend and Flask ML service on separate EC2 instances. Built during Infosys Springboard internship.
-`AWS EC2/S3 · Flask · PyTorch · Node.js · MongoDB Atlas`
-
-**[AI-Patient-Triage-System-on-Azure](https://github.com/SannidhiSriram-06/AI-Patient-Triage-System-on-Azure-CSA-Case-Study-)**
-Flask app on Azure App Service — routes patient symptoms to Azure OpenAI for triage classification, logs every interaction to Azure Table Storage.
-`Azure App Service · Azure OpenAI · Table Storage`
-
-**[Bookstore-Microservice-Architecture-on-AWS](https://github.com/SannidhiSriram-06/Bookstore-Microservice-Architecture-on-AWS)**
-Serverless case study translating a Node.js Express API into AWS-managed services — Lambda, API Gateway, MongoDB Atlas, CloudWatch.
-`AWS Lambda · API Gateway · MongoDB Atlas`
+**[aws-serverless-bookstore-api](https://github.com/SannidhiSriram-06/aws-serverless-bookstore-api)**
+Serverless microservice architecture translating a Node.js Express API into AWS-managed services to eliminate compute overhead and scale dynamically.
+`AWS Lambda · API Gateway · MongoDB Atlas · CloudWatch`
 
 ---
 
-### Experience
+### 🤖 MLOps & Full-Stack Deployments
+
+**[pitchpulse-ai-microservices](https://github.com/SannidhiSriram-06/pitchpulse-ai-microservices)**
+Decoupled cloud architecture utilizing Vercel Edge CDN for the React frontend and a Python Flask backend for CrewAI multi-agent orchestration. Highlights API security (Clerk IAM) and dynamic JWKS public key rotation.
+`Flask · React · CrewAI · Supabase · Clerk IAM`
+
+**[mlops-fraud-detection-agents](https://github.com/SannidhiSriram-06/mlops-fraud-detection-agents)**
+Containerized MLOps fraud detection multi-agent system deployed on Hugging Face Spaces using Docker, emphasizing environment parity and stateless scalable API design.
+`Docker · MLOps · Python · Hugging Face Spaces`
+
+**[aws-kyc-ml-microservices](https://github.com/SannidhiSriram-06/aws-kyc-ml-microservices)**
+Full-stack KYC document verification platform for BFSI. React frontend on S3, decoupled Node.js API Gateway and Python ML worker on separate EC2 instances for asynchronous model inference. Built during Infosys Springboard internship.
+`AWS EC2 & S3 · PM2 · Node.js · Flask · PyTorch`
+
+**[mean-serverless-job-tracker](https://github.com/SannidhiSriram-06/mean-serverless-job-tracker)**
+Serverless MEAN stack deployment on Vercel utilizing Vercel Cron jobs for automated database cleanup and ghosting detection workloads.
+`MongoDB Atlas · Express.js (Serverless) · Angular · Vercel`
+
+**[azure-patient-triage-architecture](https://github.com/SannidhiSriram-06/azure-patient-triage-architecture)**
+Flask app on Azure App Service routing patient symptoms to Azure OpenAI for triage classification, securely logging interactions to Azure Table Storage.
+`Azure App Service · Azure OpenAI · Azure Table Storage`
+
+---
+
+### 💼 Experience
 
 **AI Intern — Cloud Deployment Lead**, Infosys Springboard (Feb–Mar 2026)
 Led cloud deployment for a 25-member cohort building a BFSI-sector AI KYC system under Agile methodology. Evaluated SageMaker, Lambda, and EC2 for the ML service, selecting EC2 for cost efficiency and deployment control. Managed Git workflow and access across the cohort.
 
-### Certifications
+### 🏆 Certifications
 
-Oracle Cloud Infrastructure — DevOps Professional, Observability Professional, Multicloud Architect Professional, Generative AI Professional (4x, 2025)
-Microsoft Certified — Azure Fundamentals (AZ-900), Azure AI Fundamentals (AI-900)
-Top 500 Globally, Oracle Race to Certification 2025
+- **Oracle Cloud Infrastructure (2025):** DevOps Professional, Observability Professional, Multicloud Architect Professional, Generative AI Professional
+- **Microsoft Certified:** Azure Fundamentals (AZ-900), Azure AI Fundamentals (AI-900)
+- **Top 500 Globally, Oracle Race to Certification 2025**
 
 ---
 
