@@ -32,7 +32,7 @@ I design and deploy cloud infrastructure — AWS, Azure, Terraform, Docker, Kube
 
 ---
 
-## 🏗️ Featured Infrastructure & SRE Projects
+## 🏗️ Featured DevOps & Cloud Infrastructure Projects
 
 **[observability-fargate](https://github.com/SannidhiSriram-06/observability-fargate)**
 Prometheus + Grafana observability stack on AWS ECS Fargate — zero EC2 instances. Prometheus scrapes infrastructure metrics, Grafana visualizes them across a live dashboard with a real-time alert rule on request-rate breach. Full stack — VPC, subnets, IGW, security groups, ECR, least-privilege IAM roles, CloudWatch logging — provisioned entirely via Terraform.
@@ -56,7 +56,7 @@ Cloud architecture case study translating a Node.js Express REST API into AWS-ma
 
 ---
 
-## 🤖 AI-Integrated Cloud Deployments
+## 🤖 AI & Full-Stack Applications
 
 **[PitchPulse](https://github.com/SannidhiSriram-06/PitchPulse)**
 Full-stack B2B sales intelligence platform — React/Vite on Vercel, Flask backend on Render, CrewAI multi-agent orchestration via Groq. Three-agent pipeline researches a company, drafts sales talking points, and formats a structured brief in under a minute. Clerk JWT auth with JWKS key rotation, Supabase Postgres, Resend for scheduled email delivery.
@@ -97,8 +97,8 @@ Led cloud deployment for a 25-member cohort building a BFSI-sector AI KYC system
 
 ### 📊 GitHub Stats
 
-<img src="https://github-readme-stats.vercel.app/api?username=SannidhiSriram-06&show_icons=true&theme=default&hide_border=true&count_private=true" alt="GitHub Stats" height="165"/>
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=SannidhiSriram-06&hide_border=true" alt="GitHub Streak" height="165"/>
+<img src="https://github-readme-stats-git-master-rickstaa.vercel.app/api?username=SannidhiSriram-06&show_icons=true&theme=default&hide_border=true" alt="GitHub Stats" height="165"/>
+<img src="https://streak-stats.demolab.com/?user=SannidhiSriram-06&hide_border=true" alt="GitHub Streak" height="165"/>
 
 <br/><br/>
 
