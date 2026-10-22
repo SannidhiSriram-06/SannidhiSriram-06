@@ -1,5 +1,22 @@
 <div align="center">
 
+<h3><code>sannidhi@cloud ~ $ ./contributions.sh</code></h3>
+
+<img src="./assets/contrib-heatmap.svg" width="740" alt="Contribution heatmap" />
+
+<br/><br/>
+
+<h3><code>sannidhi@cloud ~ $ whoami</code></h3>
+
+<table>
+  <tr>
+    <td valign="top"><img src="./assets/avi-ascii.svg" width="370" alt="ASCII portrait" /></td>
+    <td valign="top"><img src="./assets/info-card.svg" width="490" alt="Info card" /></td>
+  </tr>
+</table>
+
+<br/>
+
 # Hi, I'm Sannidhi Sriram 👋
 
 ### Cloud & DevOps Engineer · Final-Year CSE @ Lovely Professional University
