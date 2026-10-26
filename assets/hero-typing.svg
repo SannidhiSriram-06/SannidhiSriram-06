@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="92" viewBox="0 0 520 92" font-family="monospace" font-size="14">
+  <text x="10" y="24" fill="#c9d1d9" opacity="0">Cloud &amp; DevOps Engineer.<animate attributeName="opacity" from="0" to="1" begin="0.0s" dur="0.4s" fill="freeze"/></text>
+  <text x="10" y="48" fill="#c9d1d9" opacity="0">I build AWS, Azure &amp; Kubernetes platforms.<animate attributeName="opacity" from="0" to="1" begin="0.6s" dur="0.4s" fill="freeze"/></text>
+  <text x="10" y="72" fill="#c9d1d9" opacity="0">CI/CD and GitOps that ship them.<animate attributeName="opacity" from="0" to="1" begin="1.2s" dur="0.4s" fill="freeze"/></text>
+</svg>
