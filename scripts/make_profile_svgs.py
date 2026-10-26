@@ -10,7 +10,7 @@ from pathlib import Path
 
 import requests
 from bs4 import BeautifulSoup
-from PIL import Image
+from PIL import Image, ImageFilter, ImageOps
 
 USER = "SannidhiSriram-06"
 ROOT = Path(__file__).resolve().parent.parent
@@ -112,15 +112,26 @@ def typed_svg(lines, cycle, path_width=490, font_size=14):
     )
 
 
-def ascii_svg(cols=100):
+def portrait_rows(cols=100):
     img = Image.open(PHOTO).convert("L")
+    img = img.crop((0, 0, img.width, int(img.height * 0.9)))  # drop the phone's footer bar
+    img = ImageOps.autocontrast(img, cutoff=2)  # widen the tonal range so features separate
+    img = img.filter(ImageFilter.UnsharpMask(radius=4, percent=180, threshold=2))  # crisper edges
     rows = int(img.height / img.width * cols * 0.5)  # characters are ~2x taller than wide
-    img = img.resize((cols, rows))
+    img = img.resize((cols, rows), Image.LANCZOS)
+    return [
+        "".join(RAMP[min(len(RAMP) - 1, (255 - img.getpixel((x, y))) * len(RAMP) // 256)] for x in range(cols))
+        for y in range(rows)
+    ]
+
+
+def ascii_svg(cols=100):
+    rows_text = portrait_rows(cols)
+    rows = len(rows_text)
     font_w, font_h = 7, 14
     width, height = cols * font_w, rows * font_h
     lines = []
-    for y in range(rows):
-        row = "".join(RAMP[min(len(RAMP) - 1, (255 - img.getpixel((x, y))) * len(RAMP) // 256)] for x in range(cols))
+    for y, row in enumerate(rows_text):
         row = row.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
         begin = f"{y * 0.05:.2f}s"
         lines.append(
